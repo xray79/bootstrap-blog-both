@@ -1,0 +1,23 @@
+.mainPage {
+  position: relative;
+}
+
+.wave {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0; */
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 180px;
+}
+
+.wave .shapeFill {
+  fill: #202529;
+}
