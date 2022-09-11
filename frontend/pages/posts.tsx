@@ -42,7 +42,7 @@ const Posts = () => {
       <Navbar />
 
       <Container className="">
-        <h2 className="mt-4 display-6 text-primary">Blog posts</h2>
+        <h1 className="display-6 text-primary mt-4">Blog posts</h1>
         <h3 className="display-7 text-primary mt-4 mb-3">
           Welcome <span className="text-danger">{user && user.name}</span>
         </h3>
