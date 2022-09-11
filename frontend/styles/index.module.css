@@ -10,7 +10,6 @@
   width: calc(100% + 1.3px);
   height: 180px;
 }
-
 .wave .shapeFill {
   fill: #202529;
 }
@@ -28,8 +27,7 @@
   height: 140px;
   transform: rotateY(180deg);
 }
-
-.waveCardsBottom .waveFillLight {
+.waveCardsBottom .waveFillLightBottom {
   fill: #f8f9fa;
 }
 

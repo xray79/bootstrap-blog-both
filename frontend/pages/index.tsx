@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Container, Button, Row, Col, Card } from "react-bootstrap";
+import { Container, Button, Row, Col, Card, Accordion } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import styles from "../styles/index.module.css";
 
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       <section className="bg-dark bg-gradient">
-        <div className={styles.wave}>
+        <div className={`${styles.wave}`}>
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <Container>
+        <Container className="pb-5">
           <Row className="my-5 text-center">
             <Col>
               <Card
@@ -112,7 +112,7 @@ export default function Home() {
           </Row>
         </Container>
 
-        <div className={styles.waveCardsBottom}>
+        {/* <div className={`${styles.waveCardsBottom}`}>
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -121,14 +121,173 @@ export default function Home() {
           >
             <path
               d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              className={styles.waveFillLightBottom}
+            ></path>
+          </svg>
+        </div> */}
+      </section>
+
+      <section className="bg-light h-100 pb-5">
+        <div className={styles.wave}>
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              className={styles.shapeFill}
+            ></path>
+          </svg>
+        </div>
+        <Container>
+          <h2 className="display-4 text-primary mt-5">How does it work?</h2>
+          <p className="text-secondary mb-5 w-50">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+            cupiditate architecto placeat sapiente explicabo. Fugiat rerum amet
+            facere magnam quos?
+          </p>
+          <Accordion className="mb-5">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Accordion Item #1</Accordion.Header>
+              <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Accordion Item #3</Accordion.Header>
+              <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Accordion Item #4</Accordion.Header>
+              <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>Accordion Item #5</Accordion.Header>
+              <Accordion.Body>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Container>
+      </section>
+
+      <section className="bg-dark bg-gradient vh-100">
+        <div className={styles.wave}>
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
               className={styles.waveFillLight}
             ></path>
           </svg>
         </div>
+        <Container className="d-flex justify-content-between mx-auto">
+          <div>
+            <Image
+              className="w-50 img-fluid"
+              src={"/diary.svg"}
+              width={"500px"}
+              height={"500px"}
+            />
+          </div>
+          <div className="w-50 my-auto">
+            <h2 className="text-primary">Privacy Guaranteed</h2>
+            <p className="text-light">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, dolorem, ipsam omnis libero assumenda iste quae
+              doloremque deleniti ex placeat nam aliquid aspernatur minima rerum
+              debitis magni similique et, odio delectus quo. Eos vel ad eaque,
+              ullam laudantium vitae obcaecati reiciendis assumenda officiis
+              necessitatibus saepe sed. Nostrum numquam voluptatem quo.
+            </p>
+            <Button variant="outline-light">Read More</Button>
+          </div>
+        </Container>
       </section>
 
-      <section className="bg-light h-100">
-        <h2></h2>
+      <section>
+        <div className={styles.wave}>
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              className={styles.shapeFill}
+            ></path>
+          </svg>
+        </div>
+
+        <Container className="d-flex justify-content-between mx-auto pb-5">
+          <div className="w-50 my-auto">
+            <h2 className="text-primary">Optionally share your stories</h2>
+            <p className="text-dark">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              neque ex omnis modi, dicta quas reprehenderit eius dignissimos
+              culpa? Suscipit quasi natus maiores molestias officiis, aliquam
+              fugit. Sunt est in harum ab laborum optio atque, assumenda amet
+              nobis blanditiis asperiores totam facilis reprehenderit illum
+              earum ex molestias officia delectus facere!
+            </p>
+            <Button variant="outline-dark">Read More</Button>
+          </div>
+          <div className="">
+            <Image
+              className="w-50 img-fluid"
+              src={"/article.svg"}
+              width={"500px"}
+              height={"500px"}
+            />
+          </div>
+        </Container>
       </section>
     </>
   );
