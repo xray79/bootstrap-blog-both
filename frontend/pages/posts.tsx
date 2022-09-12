@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import PostForm from "../components/PostForm";
 import { getPosts, reset } from "../features/posts/postsSlice";
 import PostItem from "../components/PostItem";
+import Footer from "../components/Footer";
 
 const Posts = () => {
   const Router = useRouter();
@@ -53,7 +54,7 @@ const Posts = () => {
         <PostForm />
       </Container>
 
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5">
         {isLoading ? (
           <Spinner animation="border" />
         ) : (
@@ -64,6 +65,7 @@ const Posts = () => {
           </div>
         )}
       </Container>
+      <Footer />
     </div>
   );
 };

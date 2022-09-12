@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { registerUser, reset } from "../features/auth/authSlice";
+import Footer from "../components/Footer";
 
 const Register = () => {
   const [registerData, setRegisterData] = useState({
@@ -76,7 +77,7 @@ const Register = () => {
       </Head>
       <Navbar />
 
-      <Container className="p-4">
+      <Container className="p-4 vh-100">
         <h2 className="mt-4 mb-4 display-6 text-primary">
           Please create an account
         </h2>
@@ -133,6 +134,8 @@ const Register = () => {
           </Button>
         </Form>
       </Container>
+
+      <Footer />
     </div>
   );
 };

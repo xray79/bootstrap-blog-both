@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { loginUser, registerUser, reset } from "../features/auth/authSlice";
+import Footer from "../components/Footer";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -68,7 +69,7 @@ const Login = () => {
       </Head>
       <Navbar />
 
-      <Container className="">
+      <Container className="vh-100">
         <h2 className="mt-4 mb-4 display-6 text-primary">
           Please enter your login details
         </h2>
@@ -108,6 +109,8 @@ const Login = () => {
           </Button>
         </Form>
       </Container>
+
+      <Footer />
     </div>
   );
 };

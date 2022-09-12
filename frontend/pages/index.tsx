@@ -1,6 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Container, Button, Row, Col, Card, Accordion } from "react-bootstrap";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaGoogle,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styles from "../styles/index.module.css";
 
@@ -251,7 +260,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section>
+      <section className="bg-light pb-5">
         <div className={styles.wave}>
           <svg
             data-name="Layer 1"
@@ -268,7 +277,7 @@ export default function Home() {
 
         <Container className="d-flex justify-content-between mx-auto pb-5">
           <div className="w-50 my-auto">
-            <h2 className="text-primary">Optionally share your stories</h2>
+            <h2 className="text-primary">Safely share your stories</h2>
             <p className="text-dark">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
               neque ex omnis modi, dicta quas reprehenderit eius dignissimos
@@ -289,6 +298,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <Footer />
     </>
   );
 }
