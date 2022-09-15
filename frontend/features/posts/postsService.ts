@@ -1,7 +1,6 @@
-export {};
 import axios from "axios";
 
-const API_URL = "https://blog-api-snav.onrender.com/api/posts";
+const API_URL = "http://localhost:4000/api/posts/";
 
 // create new post
 const createPost = async (postData: any, token: string) => {

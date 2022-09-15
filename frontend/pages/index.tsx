@@ -1,14 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { Container, Button, Row, Col, Card, Accordion } from "react-bootstrap";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaGoogle,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styles from "../styles/index.module.css";
@@ -50,8 +43,16 @@ export default function Home() {
               ratione modi ut, quia beatae unde corrupti esse distinctio! Ea,
               ut?
             </p>
-            <Button className="me-4">Login</Button>
-            <Button variant="danger">Sign up</Button>
+            <Link href={"/login"}>
+              <Button className="me-4" href="/login" size="lg">
+                Login
+              </Button>
+            </Link>
+            <Link href={"/register"}>
+              <Button variant="danger" href="/register" size="lg">
+                Sign up
+              </Button>
+            </Link>
           </div>
           <Image
             className="w-50 img-fluid"
@@ -83,11 +84,11 @@ export default function Home() {
               <Card
                 className={`${styles.card} ${styles.card1} bg-dark text-white py-4`}
               >
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Latest post</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Obcaecati laborum temporibus autem ullam ducimus deserunt.
+                  Saepe beatae sapiente architecto?
                 </Card.Text>
                 <Card.Text>Last updated 3 mins ago</Card.Text>
               </Card>
@@ -96,44 +97,30 @@ export default function Home() {
               <Card
                 className={`${styles.card} ${styles.card2} bg-dark text-white py-4`}
               >
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Middle post</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi voluptatum cum, quia repellendus est culpa temporibus
+                  eveniet explicabo iste sunt.
                 </Card.Text>
-                <Card.Text>Last updated 3 mins ago</Card.Text>
+                <Card.Text>Last updated 10 mins ago</Card.Text>
               </Card>
             </Col>
             <Col>
               <Card
                 className={`${styles.card} ${styles.card3} bg-dark text-white py-4`}
               >
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Old post</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  a sequi obcaecati culpa voluptatibus unde recusandae ipsum
+                  eaque ratione amet.
                 </Card.Text>
-                <Card.Text>Last updated 3 mins ago</Card.Text>
+                <Card.Text>Last updated 2 hours ago</Card.Text>
               </Card>
             </Col>
           </Row>
         </Container>
-
-        {/* <div className={`${styles.waveCardsBottom}`}>
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              className={styles.waveFillLightBottom}
-            ></path>
-          </svg>
-        </div> */}
       </section>
 
       <section className="bg-light h-100 pb-5">
@@ -159,7 +146,7 @@ export default function Home() {
           </p>
           <Accordion className="mb-5">
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Accordion Item #1</Accordion.Header>
+              <Accordion.Header>How does it work?</Accordion.Header>
               <Accordion.Body>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -171,7 +158,7 @@ export default function Home() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Header>Is my information secure?</Accordion.Header>
               <Accordion.Body>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -183,7 +170,9 @@ export default function Home() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
-              <Accordion.Header>Accordion Item #3</Accordion.Header>
+              <Accordion.Header>
+                How can I share information securely?
+              </Accordion.Header>
               <Accordion.Body>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -195,7 +184,7 @@ export default function Home() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3">
-              <Accordion.Header>Accordion Item #4</Accordion.Header>
+              <Accordion.Header>How can I sign up?</Accordion.Header>
               <Accordion.Body>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -207,7 +196,9 @@ export default function Home() {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="4">
-              <Accordion.Header>Accordion Item #5</Accordion.Header>
+              <Accordion.Header>
+                What other services are available?
+              </Accordion.Header>
               <Accordion.Body>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

@@ -34,7 +34,6 @@ const postPosts = asyncHandler((req, res) => __awaiter(void 0, void 0, void 0, f
         res.status(400);
         throw new Error("Please add a text field");
     }
-    console.log(req.body);
     const post = yield Post.create({
         user: req.user.id,
         title: req.body.title,

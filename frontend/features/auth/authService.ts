@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://blog-api-snav.onrender.com/api/users/";
+const API_URL = "http://localhost:4000/api/users/";
 
 // register user
 const register = async (userData: any) => {
